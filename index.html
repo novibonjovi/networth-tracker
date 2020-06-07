@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./css/main.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="sidebar">
+      <h1>Wealth Tracker</h1>
+      <div class="container-cards">
+        <div class="card card-wealth">
+          <span class="card-title">Wealth</span>
+          <div class="card-numbers">
+            <div class="card-numbers-values">
+              <div class="card-currency">CHF</div>
+              <div class="card-amount" id="valueWealth">0</div>
+            </div>
+            <div class="card-numbers-percent">
+              <div class="card-percent-icon">
+                <svg fill="currentColor" viewBox="0 0 20 20" id="iconWealth">
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.293 7.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 5.414V17a1 1 0 11-2 0V5.414L6.707 7.707a1 1 0 01-1.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+              <div class="card-percent-value" id="trendWealth">10.0%</div>
+            </div>
+          </div>
+        </div>
+        <button class="card card-bank" onclick="updateBank()">
+          <span class="card-title">Bank Account</span>
+          <div class="card-numbers">
+            <div class="card-numbers-values">
+              <div class="card-currency">CHF</div>
+              <div class="card-amount" id="valueBank">0</div>
+            </div>
+            <div class="card-numbers-percent">
+              <div class="card-percent-icon">
+                <svg fill="currentColor" viewBox="0 0 20 20" id="iconBank">
+                  <path
+                    fill-rule="evenodd"
+                    d="M14.707 12.293a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L9 14.586V3a1 1 0 012 0v11.586l2.293-2.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+              <div class="card-percent-value" id="trendBank">8.0%</div>
+            </div>
+          </div>
+        </button>
+        <button class="card card-stocks" onclick="updateStocks()">
+          <span class="card-title">Stocks</span>
+          <div class="card-numbers">
+            <div class="card-numbers-values">
+              <div class="card-currency">CHF</div>
+              <div class="card-amount" id="valueStocks">0</div>
+            </div>
+            <div class="card-numbers-percent">
+              <div class="card-percent-icon">
+                <svg fill="currentColor" viewBox="0 0 20 20" id="iconStocks">
+                  <path
+                    fill-rule="evenodd"
+                    d="M14.707 12.293a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L9 14.586V3a1 1 0 012 0v11.586l2.293-2.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+              <div class="card-percent-value" id="trendStocks">8.0%</div>
+            </div>
+          </div>
+        </button>
+        <button class="card card-pillar3a" onclick="updatePillar3a()">
+          <span class="card-title">Pillar 3a</span>
+          <div class="card-numbers">
+            <div class="card-numbers-values">
+              <div class="card-currency">CHF</div>
+              <div class="card-amount" id="valuePillar3a">0</div>
+            </div>
+            <div class="card-numbers-percent">
+              <div class="card-percent-icon">
+                <svg fill="currentColor" viewBox="0 0 20 20" id="iconPillar3a">
+                  <path
+                    fill-rule="evenodd"
+                    d="M14.707 12.293a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L9 14.586V3a1 1 0 012 0v11.586l2.293-2.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+              <div class="card-percent-value" id="trendPillar3a">8.0%</div>
+            </div>
+          </div>
+        </button>
+      </div>
+    </div>
+    <main class="main">
+      <div class="main-header">
+        <span class="main-heading"
+          >Display your Wealth in different charts</span
+        >
+        <div class="chart-navbar">
+          <div class="btn-bar" onclick="displayBar()">Bar Chart</div>
+          <div class="btn-line" onclick="displayLine()">Line Chart</div>
+          <div class="btn-pie" onclick="displayPie()">Pie Chart</div>
+        </div>
+      </div>
+      <canvas id="myChart"></canvas>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script type="text/javascript" src="code.js"></script>
+  </body>
+</html>
