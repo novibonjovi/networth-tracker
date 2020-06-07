@@ -51,7 +51,7 @@ h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 60px;
+  margin-top: 100px;
 }
 
 .sidebar .card {
@@ -172,6 +172,11 @@ main {
           flex-direction: column;
 }
 
+main .main-date {
+  font-size: 32px;
+  margin-left: 100px;
+}
+
 main .main-header .main-heading {
   font-size: 32px;
 }
@@ -196,11 +201,7 @@ main .main-header .chart-navbar div.active {
 }
 
 main canvas {
-  margin-top: 32px;
-}
-
-.invisible {
-  position: absolute;
-  left: -9999px;
+  margin-top: 60px;
+  max-height: 75vh;
 }
 /*# sourceMappingURL=main.css.map */

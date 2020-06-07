@@ -5,6 +5,49 @@ const date = new Date();
 let month = date.getMonth();
 let year = date.getFullYear();
 
+// This sets the current Date and Year in the Header
+let mainDate = document.querySelector('.main-date');
+let monthString;
+switch (month) {
+  case 0:
+    monthString = 'January';
+    break;
+  case 1:
+    monthString = 'February';
+    break;
+  case 2:
+    monthString = 'March';
+    break;
+  case 3:
+    monthString = 'April';
+    break;
+  case 4:
+    monthString = 'May';
+    break;
+  case 5:
+    monthString = 'June';
+    break;
+  case 6:
+    monthString = 'July';
+    break;
+  case 7:
+    monthString = 'August';
+    break;
+  case 8:
+    monthString = 'September';
+    break;
+  case 9:
+    monthString = 'Oktober';
+    break;
+  case 10:
+    monthString = 'November';
+    break;
+  case 11:
+    monthString = 'December';
+    break;
+}
+mainDate.innerHTML = monthString + ' ' + year;
+
 // Data Arrays for Amount of Funds
 let dataBank = [];
 let dataStocks = [];
@@ -79,6 +122,7 @@ function updateBank() {
 
   setData();
   updateFunds();
+  setTrend();
   displayBar();
 }
 
@@ -98,6 +142,7 @@ function updateStocks() {
 
   setData();
   updateFunds();
+  setTrend();
   displayBar();
 }
 
@@ -117,6 +162,7 @@ function updatePillar3a() {
 
   setData();
   updateFunds();
+  setTrend();
   displayBar();
 }
 
@@ -180,6 +226,9 @@ function displayBar() {
 
     // Configuration options go here
     options: {
+      legend: {
+        position: 'right',
+      },
       scales: {
         xAxes: [
           {
@@ -262,6 +311,9 @@ function displayLine() {
 
     // Configuration options go here
     options: {
+      legend: {
+        position: 'right',
+      },
       scales: {
         xAxes: [
           {
@@ -309,7 +361,11 @@ function displayPie() {
     },
 
     // Configuration options go here
-    options: {},
+    options: {
+      legend: {
+        position: 'right',
+      },
+    },
   });
 }
 
