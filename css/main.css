@@ -2,7 +2,7 @@
 Design Systems (use hsl instead of hex. better to adjust font colors)
 Color Palette: Sip Palette 3
 Font Sizes: 12px - 16px - 20px - 24px - 32px - 44px - 60px
-Font Weights: 400 - 700
+Font Weights: 300 - 400 - 700 - 900
 Font Color: Dark - Light grey
 Spacing: multipliers of 16px (12px - 16px - 20px - 24px - 32px - 48px)
 */
@@ -13,10 +13,16 @@ Spacing: multipliers of 16px (12px - 16px - 20px - 24px - 32px - 48px)
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: 'Lato';
+  cursor: default;
+}
+
+button * {
+  cursor: pointer;
 }
 
 body {
-  background-color: #f7f7f7;
+  color: #221e24;
+  background-color: #fbfcfe;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -29,9 +35,9 @@ h1 {
 .sidebar {
   height: 100vh;
   width: 300px;
-  background-color: #c2c2c2;
+  background-color: #a9bcd6;
   padding: 32px 32px 32px 22px;
-  border-left: solid 10px #f7f7f7;
+  border-left: solid 10px #fbfcfe;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -58,7 +64,7 @@ h1 {
   padding: 24px 24px 14px 24px;
   margin: 0 0;
   width: 300px;
-  background-color: #c2c2c2;
+  background-color: #a9bcd6;
   text-align: left;
   border-top: none;
   border-right: none;
@@ -101,6 +107,7 @@ h1 {
 }
 
 .sidebar .card .card-numbers .card-numbers-percent {
+  color: #3b4554;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -108,8 +115,9 @@ h1 {
       -ms-flex-align: baseline;
           align-items: baseline;
   padding: 10px;
-  background-color: #dbdbdb;
+  background-color: #a9bcd6;
   border-radius: 20px;
+  border: solid 2px #3b4554;
 }
 
 .sidebar .card .card-numbers .card-numbers-percent .card-percent-icon {
@@ -128,40 +136,52 @@ h1 {
 }
 
 .sidebar .card-wealth {
-  border-left: solid 10px #f7f7f7;
+  border-left: solid 10px #ed4545;
 }
 
 .sidebar .card-bank {
-  border-left: solid 10px #89da7f;
+  border-left: solid 10px #dd1d7a;
 }
 
 .sidebar .card-bank:hover {
-  background-color: #a8a8a8;
+  background-color: #8a9db7;
   cursor: pointer;
+}
+
+.sidebar .card-bank:hover .card-numbers-percent {
+  background-color: #8a9db7;
 }
 
 .sidebar .card-stocks {
-  border-left: solid 10px #afa4e2;
+  border-left: solid 10px #8825cb;
 }
 
 .sidebar .card-stocks:hover {
-  background-color: #a8a8a8;
+  background-color: #8a9db7;
   cursor: pointer;
+}
+
+.sidebar .card-stocks:hover .card-numbers-percent {
+  background-color: #8a9db7;
 }
 
 .sidebar .card-pillar3a {
-  border-left: solid 10px #d37179;
+  border-left: solid 10px #3053cf;
 }
 
 .sidebar .card-pillar3a:hover {
-  background-color: #a8a8a8;
+  background-color: #8a9db7;
   cursor: pointer;
+}
+
+.sidebar .card-pillar3a:hover .card-numbers-percent {
+  background-color: #8a9db7;
 }
 
 main {
   width: calc(100vw - 300px);
   height: 100vh;
-  background-color: #dbdbdb;
+  background-color: #eef5fc;
   padding: 32px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -174,7 +194,8 @@ main {
 
 main .main-date {
   font-size: 32px;
-  margin-left: 100px;
+  margin-right: 100px;
+  float: right;
 }
 
 main .main-header .main-heading {
@@ -193,11 +214,11 @@ main .main-header .chart-navbar div {
   font-size: 16px;
   text-align: left;
   width: 120px;
-  border-bottom: solid 5px #f7f7f7;
+  border-bottom: solid 5px #a9bcd6;
 }
 
 main .main-header .chart-navbar div.active {
-  border-bottom: solid 5px #5c5c5c;
+  border-bottom: solid 5px #3b4554;
 }
 
 main canvas {

@@ -205,20 +205,20 @@ function displayBar() {
       datasets: [
         {
           label: 'Pillar 3a',
-          backgroundColor: 'hsl(160, 75%, 80%)',
-          borderColor: 'hsl(160, 75%, 80%)',
+          backgroundColor: 'hsl(227, 62%, 50%)',
+          borderColor: 'hsl(227, 62%, 50%)',
           data: dataPillar3a,
         },
         {
           label: 'Stocks',
-          backgroundColor: 'hsl(80, 75%, 80%)',
-          borderColor: 'hsl(80, 75%, 80%)',
+          backgroundColor: 'hsl(276, 69%, 47%)',
+          borderColor: 'hsl(276, 69%, 47%)',
           data: dataStocks,
         },
         {
           label: 'Bank Account',
-          backgroundColor: 'hsl(0, 75%, 80%)',
-          borderColor: 'hsl(0, 75%, 80%)',
+          backgroundColor: 'hsl(320, 76%, 45%)',
+          borderColor: 'hsl(320, 76%, 45%)',
           data: dataBank,
         },
       ],
@@ -284,27 +284,31 @@ function displayLine() {
       datasets: [
         {
           label: 'Pillar 3a',
-          backgroundColor: 'hsl(160, 75%, 80%)',
-          borderColor: 'hsl(160, 75%, 80%)',
+          backgroundColor: 'hsl(227, 62%, 50%)',
+          borderColor: 'hsl(227, 62%, 50%)',
           data: dataPillar3a,
+          fill: 'false',
         },
         {
           label: 'Stocks',
-          backgroundColor: 'hsl(80, 75%, 80%)',
-          borderColor: 'hsl(80, 75%, 80%)',
+          backgroundColor: 'hsl(276, 69%, 47%)',
+          borderColor: 'hsl(276, 69%, 47%)',
           data: dataStocks,
+          fill: 'false',
         },
         {
           label: 'Bank Account',
-          backgroundColor: 'hsl(0, 75%, 80%)',
-          borderColor: 'hsl(0, 75%, 80%)',
+          backgroundColor: 'hsl(320, 76%, 45%)',
+          borderColor: 'hsl(320, 76%, 45%)',
           data: dataBank,
+          fill: 'false',
         },
         {
           label: 'Wealth',
-          backgroundColor: 'hsl(300, 75%, 80%)',
-          borderColor: 'hsl(300, 75%, 80%)',
+          backgroundColor: 'hsl(354, 72%, 58%)',
+          borderColor: 'hsl(354, 72%, 58%)',
           data: dataWealth,
+          fill: 'false',
         },
       ],
     },
@@ -356,6 +360,12 @@ function displayPie() {
       datasets: [
         {
           data: [dataBank[month], dataStocks[month], dataPillar3a[month]],
+
+          backgroundColor: [
+            'hsl(320, 76%, 45%)',
+            'hsl(276, 69%, 47%)',
+            'hsl(227, 62%, 50%)',
+          ],
         },
       ],
     },
@@ -446,7 +456,7 @@ function main() {
   setData();
   updateFunds();
   setTrend();
-  displayBar();
+  displayLine();
 }
 
 main();
