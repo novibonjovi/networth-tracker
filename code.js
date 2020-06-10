@@ -123,7 +123,7 @@ function updateBank() {
   setData();
   updateFunds();
   setTrend();
-  displayBar();
+  displayLine();
 }
 
 function updateStocks() {
@@ -143,7 +143,7 @@ function updateStocks() {
   setData();
   updateFunds();
   setTrend();
-  displayBar();
+  displayLine();
 }
 
 function updatePillar3a() {
@@ -163,7 +163,7 @@ function updatePillar3a() {
   setData();
   updateFunds();
   setTrend();
-  displayBar();
+  displayLine();
 }
 
 // Bar Chart
