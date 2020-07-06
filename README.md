@@ -1,2 +1,2 @@
 # Networth Tracker
-[https://novibonjovi.github.io/networth-tracker/](https://novibonjovi.github.io/networth-tracker/)
+[View in Browser](https://novibonjovi.github.io/networth-tracker/)
